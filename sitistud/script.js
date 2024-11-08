@@ -1,25 +1,6 @@
-/*const urlSections = [
-    {
-        title: "2A Arredo",
-        links: [
-            "adarkar",
-            "prof-palomb"
-        ]
-    },
-    {
-        title: "2B Moda",
-        links: [
-        ]
-    },
-    {
-        title: "2C Moda",
-        links: [
-        ]
-    }
-];*/
-
 const sidebar = document.querySelector(".sidebar");
 const iframe = document.getElementById("mainIframe");
+const url = "https://script.google.com/macros/s/AKfycbzpUVk3t742shuNKbhd77oPHjR94gkwqycavm_8xqajJFC_VTnjEexzPImpH58O79Fj3w/exec?k=9XXSTi3hE3CGHBskc5bu";
 
 function initializeSidebar(sections) {
     sections.forEach((section, sectionIndex) => {
@@ -40,6 +21,4 @@ function initializeSidebar(sections) {
     });
 }
 
-fetch("https://script.google.com/macros/s/AKfycbwmqs4QbJXPiVSpwBL0FFzAXCosSxbz6ndY4yPbYlwdEGJpj5KKYGl1yB-5_RlmBkCp0A/exec?x=sitistud").then(async x => {
-    initializeSidebar(await x.json());
-});
+fetch(url).then(async x => initializeSidebar(await x.json()));
