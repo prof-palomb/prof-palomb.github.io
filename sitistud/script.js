@@ -1,4 +1,4 @@
-const urlSections = [
+/*const urlSections = [
     {
         title: "2A Arredo",
         links: [
@@ -16,7 +16,7 @@ const urlSections = [
         links: [
         ]
     }
-];
+];*/
 
 const sidebar = document.querySelector(".sidebar");
 const iframe = document.getElementById("mainIframe");
@@ -29,7 +29,7 @@ function initializeSidebar(sections) {
 
         section.links.forEach((name, linkIndex) => {
             const linkElement = document.createElement("a");
-            linkElement.textContent = `Link ${sectionIndex + 1}.${linkIndex + 1}`;
+            linkElement.textContent = name.replace(/\b\w/g, (char) => char.toUpperCase());
             linkElement.href = '#';
             linkElement.addEventListener("click", (event) => {
                 event.preventDefault();
@@ -40,4 +40,6 @@ function initializeSidebar(sections) {
     });
 }
 
-initializeSidebar(urlSections);
+fetch("https://script.google.com/macros/s/AKfycbwmqs4QbJXPiVSpwBL0FFzAXCosSxbz6ndY4yPbYlwdEGJpj5KKYGl1yB-5_RlmBkCp0A/exec?x=sitistud").then(async x => {
+    initializeSidebar(await x.json());
+});
