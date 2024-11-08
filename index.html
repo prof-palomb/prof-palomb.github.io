@@ -6,10 +6,50 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+      /* Styling the sidebar */
+      .sidebar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 200px;
+          height: 100vh;
+          background-color: #333;
+          color: white;
+          padding-top: 20px;
+          box-sizing: border-box;
+      }
+      /* Styling the links in the sidebar */
+      .sidebar a {
+          display: block;
+          color: white;
+          padding: 10px;
+          text-decoration: none;
+      }
+      .sidebar a:hover {
+          background-color: #555;
+      }
+      /* Main content area styling */
+      .main-content {
+          margin-left: 220px; /* Leave space for sidebar */
+          padding: 20px;
+      }
+  </style>
 </head>
 
 <body>
-  Hello world
+  <div class="sidebar">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+  </div>
+
+  <!-- Main content area -->
+  <div class="main-content">
+      <h1>Hello, World!</h1>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 
