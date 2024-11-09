@@ -12,8 +12,9 @@ html {
     height: 100vh;
     background-color: #333;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 /* Sidebar titles styling */
 .sidebar h3 {
@@ -43,10 +44,52 @@ html {
     width: calc(100vw - 200px); /* Full viewport width minus sidebar width */
     height: 100vh;
     overflow: hidden; /* Prevent scrolling */
+    border: none;
+    transition: left 0.3s ease;
 }
 /* Fullscreen iframe */
 .main-content iframe {
     width: 100%;
     height: 100%;
     border: none; /* Remove iframe border */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-190px);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        opacity: 0.95;
+    }
+
+    .main-content {
+        left: 10px;
+        width: 100%;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 5px; /* Position it 20px from the top of the viewport */
+        left: 5px; /* Position it 20px from the left of the viewport */
+        background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent background */
+        color: #bbb; /* White text */
+        font-size: 20px; /* Font size for the hamburger icon */
+        padding: 5px;
+        border: none;
+        border-radius: 4px; /* Rounded button */
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Soft shadow for elegance */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        cursor: pointer;
+        display: inline-flex; /* Use flexbox to center the text */
+        justify-content: center; /* Center text horizontally */
+        align-items: center; /* Center text vertically */
+        vertical-align: middle; /* Fix vertical alignment issue */
+        line-height: 1;
+    }
+
+      .menu-btn:active {
+        transform: scale(0.90); /* Slight shrink effect when clicked */
+      }
 }

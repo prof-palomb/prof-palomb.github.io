@@ -5,16 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Progetto Siti Studenti</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <div class="sidebar" id="sidebar"></div>
-
   <div class="main-content">
     <iframe id="mainIframe" src=""></iframe>
   </div>
-  
+
+  <div class="sidebar active" id="sidebar"></div>
+  <span class="menu-btn material-icons" onclick="toggleSidebar()">menu</span>
+  <!-- <span class="menu-btn" onclick="toggleSidebar()">☰</span> -->
+
   <script src="script.js"></script>
 </body>
 
