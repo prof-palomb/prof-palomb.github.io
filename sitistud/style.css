@@ -85,7 +85,7 @@ html {
         display: inline-flex; /* Use flexbox to center the text */
         justify-content: center; /* Center text horizontally */
         align-items: center; /* Center text vertically */
-        vertical-align: middle; /* Fix vertical alignment issue */
+        /* vertical-align: middle; /* Fix vertical alignment issue */
         line-height: 1;
     }
 
