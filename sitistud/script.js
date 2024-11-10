@@ -7,6 +7,8 @@ function toggleSidebar() {
 }
 
 function initializeSidebar(sections) {
+    document.getElementById("loading-icon").remove();
+
     sections.forEach((section, sectionIndex) => {
         const titleElement = document.createElement("h3");
         titleElement.textContent = section.title;

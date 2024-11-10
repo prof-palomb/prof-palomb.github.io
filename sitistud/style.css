@@ -54,6 +54,22 @@ html {
     border: none; /* Remove iframe border */
 }
 
+.loading-icon {
+    font-size: 30px;          /* Size of the icon */
+    color: #bbb;              /* Icon color */
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    display: inline-block;
+    animation: loadingspin 3s linear infinite; /* Animation for rotating */
+}
+
+/* Keyframes for spinning */
+@keyframes loadingspin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-190px);
@@ -89,7 +105,7 @@ html {
         line-height: 1;
     }
 
-      .menu-btn:active {
+    .menu-btn:active {
         transform: scale(0.90); /* Slight shrink effect when clicked */
-      }
+    }
 }
